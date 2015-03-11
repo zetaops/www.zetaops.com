@@ -11,11 +11,22 @@ body {
     margin: 0
 }
 
+
+	video#bgvid {
+			position: relative; right: 0; bottom: 0;
+			min-width: 100%; min-height: 100%;
+			width: auto; height: auto; z-index: -100;
+			background: url(../img/clouds.jpg) no-repeat;
+			background-size: cover;
+		}
+
+
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block
 }
 
-audio, canvas, progress, video {
+audio, canvas, progress {
     display: inline-block;
     vertical-align: baseline
 }
@@ -13088,7 +13099,7 @@ label.error {
 
 .hero-static .inner {
     display: table;
-    position: relative;
+    position: inherit;
     z-index: 1;
     width: 100%;
     height: 500px;
@@ -13100,7 +13111,8 @@ label.error {
     display: table-cell;
     width: 100%;
     vertical-align: middle;
-    text-align: center
+    text-align: center;
+
 }
 
 .hero-static h1 {
@@ -13212,7 +13224,7 @@ label.error {
 .hero-static.fullscreen {
     position: absolute;
     z-index: 100;
-    background: #fff;
+    /*background: #fff;*/
     top: 0;
     left: 0;
     background-position: center top;
