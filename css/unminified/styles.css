@@ -13,6 +13,7 @@ html {
 
 body {
     margin: 0;
+    line-height: 0.429;
 }
 
 article,
@@ -245,7 +246,7 @@ html {
 body {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-size: 1em;
-    line-height: 1.42857143;
+    line-height: 0.429;
     color: #000000;
     background-color: #ffffff;
 }
@@ -11263,6 +11264,7 @@ body {
 
 body {
     background-repeat: repeat;
+    line-height: 0.429;
 }
 
 .gray-bg {
@@ -13813,7 +13815,6 @@ label.error {
 }
 
 .header.transparent .inner .tools a {
-    color: #fff;
     opacity: 1;
     filter: alpha(opacity=100);
 }

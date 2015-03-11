@@ -130,7 +130,7 @@ jQuery(document).ready(function ($) {
     $(window).on('scroll', function () {
         var $logoAlt = $transpHeader.find('.logo > img').data('logo-alt');
         var $logoDefault = $transpHeader.find('.logo > img').data('logo-default');
-        if ($(window).scrollTop() > $(window).height()) {
+        if ($(window).scrollTop() > $(window).height() - 5) {
             $transpHeader.addClass('opaque');
             $transpHeader.find('.logo > img').attr('src', $logoDefault);
         } else {
