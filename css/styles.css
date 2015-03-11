@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin-ext,latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700,400italic&subset=latin-ext,latin);
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12,16 +12,18 @@ body {
     line-height: 0.429;
 }
 
-
-	video#bgvid {
-			position: relative; right: 0; bottom: 0;
-			min-width: 100%; min-height: 100%;
-			width: auto; height: auto; z-index: -100;
-			background: url(../img/clouds.jpg) no-repeat;
-			background-size: cover;
-		}
-
-
+video#bgvid {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url(../img/clouds.jpg) no-repeat;
+    background-size: cover;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block
@@ -215,7 +217,7 @@ html {
 }
 
 body {
-    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 0.429;
     color: #000;
@@ -704,6 +706,19 @@ pre code {
 }
 
 @media (min-width: 992px) {
+
+    a#fork img {
+        width: 50px;
+    }
+
+    a#fork {
+        position: absolute;
+        z-index: 2000;
+        top: 0px;
+        border: 0px none;
+        right: 20px;
+    }
+
     .container {
         width: 970px
     }
@@ -10440,8 +10455,6 @@ img {
     margin-bottom: 0 !important
 }
 
-
-
 .no-padding-bottom {
     padding-bottom: 0 !important
 }
@@ -12112,7 +12125,7 @@ label.error {
 .header .tools {
     width: 215px;
     float: right;
-    font-size:75%;
+    font-size: 75%;
     display: none;
 }
 
@@ -13102,15 +13115,14 @@ label.error {
 }
 
 .hero-static .inner {
-    display: table;
-    position: inherit;
-    z-index: 1;
-    width: 100%;
-    height: 500px;
-    padding: 36px 15px;
-    top: 0
+  display: table;
+  position: absolute;
+  z-index: 3333;
+  width: 100%;
+  height: 500px;
+  padding: 36px 15px;
+  top: 0;
 }
-
 .hero-static .content {
     display: table-cell;
     width: 100%;
@@ -13615,8 +13627,18 @@ label.error {
     color: #000
 }
 
+img#corporate-img {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(171, 171, 171, 0.5);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(171, 171, 171, 0.5);
+    box-shadow: 10px 10px 5px 0px rgba(171, 171, 171, 0.5);
+}
+
+div#foss-logo-cont {
+    padding-left: 140px;
+}
+
 .fw-img-banner ul li {
-    margin-bottom: 2px
+    margin-bottom: 40px;
 }
 
 .fw-img-banner ul a {
@@ -19109,7 +19131,11 @@ meta.foundation-data-attribute-namespace {
     }
 }
 
-@media only screen and (max-width: 991px) and only screen and (max-width:768px) {
+@media only screen and (max-width: 991px) and only screen and (max-width:
+
+768px
+
+) {
     .nav-tabs.vertical li {
         margin: 0px 10px 5px 10px
     }
@@ -19173,28 +19199,32 @@ meta.foundation-data-attribute-namespace {
     -moz-box-shadow: none;
     box-shadow: none;
     margin-bottom: 10px;
-    line-height:1.5;
+    line-height: 1.5;
 }
 
 .panel .panel-heading {
     padding-bottom: 0;
     padding-top: 0
 }
-section#corporate h2{
-    padding-top:20px;
+
+section#corporate h2 {
+    padding-top: 20px;
 }
+
 .panel .panel-heading a {
     text-decoration: none;
     font-weight: bold
 }
-section#development div.overlay{
+
+section#development div.overlay {
     top: 0;
     /*display: none;*/
 }
+
 /*section#development div.row{*/
-    /*background-color: rgba(0, 0, 0, 0.70);*/
+/*background-color: rgba(0, 0, 0, 0.70);*/
 /*}*/
-section#development{
+section#development {
     background-size: 106% auto !important;
     background-position-x: 100px !important;
     min-height: 706px;
@@ -19205,11 +19235,12 @@ section#development{
     margin-top: 214px;
 }
 
-section#research{
+section#research {
     min-height: 650px;
     padding-top: 100px;
 }
-section#career{
+
+section#career {
     min-height: 650px;
     padding-top: 100px !important;
 }
@@ -21938,3 +21969,4 @@ section#career{
         font-weight: normal
     }
 }
+
