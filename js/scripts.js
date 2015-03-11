@@ -77,7 +77,7 @@ jQuery(document).ready(function ($) {
     var $purchHistToggle = $('.shop-history .panel-heading a');
     var $packageCarousel = $('.package-carousel');
     var $scItemDelete = $('.shopping-cart .item .delete');
-    var $interactiveCard = $('.card-fields');
+    //var $interactiveCard = $('.card-fields');
     /// ----------------------------------------------------------------
 
     /// User Account Variables------------------------------------------
@@ -214,29 +214,29 @@ jQuery(document).ready(function ($) {
     /*Cart Dropdown
      *******************************************/
     //Items Carousel
-    $cartCarousel.owlCarousel({
-        margin: 10,
-        loop: false,
-        dots: false,
-        navText: [
-            '<div class="arr01"></div><div class="arr02"></div>',
-            '<div class="arr03"></div><div class="arr04"></div>'
-        ],
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 3,
-                nav: false
-            },
-            1000: {
-                items: 3,
-                nav: true
-            }
-        }
-    });
+    //$cartCarousel.owlCarousel({
+    //    margin: 10,
+    //    loop: false,
+    //    dots: false,
+    //    navText: [
+    //        '<div class="arr01"></div><div class="arr02"></div>',
+    //        '<div class="arr03"></div><div class="arr04"></div>'
+    //    ],
+    //    responsive: {
+    //        0: {
+    //            items: 1,
+    //            nav: true
+    //        },
+    //        600: {
+    //            items: 3,
+    //            nav: false
+    //        },
+    //        1000: {
+    //            items: 3,
+    //            nav: true
+    //        }
+    //    }
+    //});
 
     //Add(+/-) Button Number Incrementers
     $(".incr-btn").on("click", function (e) {
@@ -357,7 +357,7 @@ jQuery(document).ready(function ($) {
     /////////////////////////  Parallax Hero  ////////////////////////////
     //////////////////////////////////////////////////////////////////////
 
-    $heroParallax.parallax();
+    //$heroParallax.parallax();
 
     ///////////////////////////////////////////////////////////////////////
     ///////////////////////  Custom Widgets  /////////////////////////////
@@ -533,7 +533,7 @@ jQuery(document).ready(function ($) {
 
     /*Light Gallery (Lightbox)
      *******************************************/
-    $lightGallery.lightGallery({caption: true});
+    //$lightGallery.lightGallery({caption: true});
 
     ///////////////////////////////////////////////////////////////////////
     /////////////////////////////  Shop Tools  ////////////////////////////
@@ -620,16 +620,16 @@ jQuery(document).ready(function ($) {
 
     /*Interactive Credit Card
      *******************************************/
-    if ($interactiveCard.length > 0) {
-        $interactiveCard.card({
-            container: $('.card-wrapper'),
-            numberInput: 'input#cc_number',
-            nameInput: 'input#cc_name',
-            expiryInput: 'input#cc_expiry',
-            cvcInput: 'input#cc_cvc'
-        });
-    }
-
+    //if ($interactiveCard.length > 0) {
+    //    $interactiveCard.card({
+    //        container: $('.card-wrapper'),
+    //        numberInput: 'input#cc_number',
+    //        nameInput: 'input#cc_name',
+    //        expiryInput: 'input#cc_expiry',
+    //        cvcInput: 'input#cc_cvc'
+    //    });
+    //}
+    //
 
     ///////////////////////////////////////////////////////////////////////
     ////////////////////////////  User Account  //////////////////////////
@@ -659,22 +659,22 @@ jQuery(document).ready(function ($) {
     });
 
     // Initialize isotope
-    var $gallGridMassonry = $('.gallery-grid.masonry');
-    $gallGridMassonry.isotope({
-        itemSelector: '.item',
-        masonry: {
-            columnWidth: '.grid-sizer'
-        }
-    });
-
-    // filter items when filter link is clicked
-    $('.filters a').click(function () {
-        var selector = $(this).attr('data-filter');
-        $gallGridMassonry.isotope({
-            filter: selector
-        });
-        return false;
-    });
+    //var $gallGridMassonry = $('.gallery-grid.masonry');
+    //$gallGridMassonry.isotope({
+    //    itemSelector: '.item',
+    //    masonry: {
+    //        columnWidth: '.grid-sizer'
+    //    }
+    //});
+    //
+    //// filter items when filter link is clicked
+    //$('.filters a').click(function () {
+    //    var selector = $(this).attr('data-filter');
+    //    $gallGridMassonry.isotope({
+    //        filter: selector
+    //    });
+    //    return false;
+    //});
 
 
     ///////////////////////////////////////////////////////////////////////
@@ -926,170 +926,170 @@ jQuery(document).ready(function ($) {
 
     /*Fullscreen Hero Slider
      ************************************************/
-    var fs_slider = new MasterSlider();
-
-    fs_slider.control("arrows", {autohide: true});
-    fs_slider.setup("fs-slider", {
-        width: 1024,
-        height: 768,
-        centerControls: false,
-        layout: "fullscreen",
-        preload: 'all',
-        loop: true,
-        speed: 20
-    });
+    //var fs_slider = new MasterSlider();
+    //
+    //fs_slider.control("arrows", {autohide: true});
+    //fs_slider.setup("fs-slider", {
+    //    width: 1024,
+    //    height: 768,
+    //    centerControls: false,
+    //    layout: "fullscreen",
+    //    preload: 'all',
+    //    loop: true,
+    //    speed: 20
+    //});
 
 
     /*Partial View Slider
      ************************************************/
-    var partView = new MasterSlider();
-
-    partView.control('arrows');
-    partView.control('slideinfo', {insertTo: "#partial-view", autohide: false, align: 'bottom', size: 160});
-    partView.control('circletimer', {color: "#FFFFFF", stroke: 9});
-
-    partView.setup('slider01', {
-        width: 760,
-        height: 400,
-        space: 10,
-        loop: true,
-        view: 'partialWave',
-        layout: 'partialview'
-    });
-
-    /*Fullwidth Partial View Slider
-     ************************************************/
-    var fsPartView = new MasterSlider();
-
-    fsPartView.control('arrows');
-    fsPartView.control('slideinfo', {insertTo: "#fs-partial-view-info", autohide: false, align: 'bottom', size: 160});
-    fsPartView.control('circletimer', {color: "#FFFFFF", stroke: 9});
-
-    fsPartView.setup('fs-partial-view', {
-        width: 760,
-        height: 400,
-        space: 10,
-        loop: true,
-        view: 'fadeFlow',
-        layout: 'partialview'
-    });
-
-    /*Display Slider
-     ************************************************/
-    var slider = new MasterSlider();
-    slider.setup('masterslider', {
-        width: 507,
-        height: 286,
-        speed: 20,
-        preload: 0,
-        space: 2,
-        view: 'flow'
-    });
-    slider.control('arrows');
-    slider.control('bullets', {autohide: false});
-
-    /*Staff 3D Carousel
-     ************************************************/
-    var staffCar = new MasterSlider();
-
-    staffCar.setup('slider02', {
-        loop: true,
-        width: 240,
-        height: 240,
-        speed: 20,
-        view: 'wave',
-        preload: 0,
-        space: 0
-    });
-    staffCar.control('arrows');
-    staffCar.control('slideinfo', {insertTo: '#staff-info'});
-
-    /*Product Showcase Slider
-     ************************************************/
-    var showcaseSlider = new MasterSlider();
-    showcaseSlider.setup('showcase-slider', {
-        width: 1024,
-        height: 580,
-        space: 0,
-        fillMode: 'fit',
-        speed: 25,
-        preload: 'all',
-        view: 'flow',
-        loop: true
-    });
-
-    showcaseSlider.control('arrows', {autohide: false});
-    showcaseSlider.control('bullets', {autohide: false, align: 'bottom', margin: -30});
-
-    /*Logos Carousel
-     ************************************************/
-    var $autoplay = $logoCarousel.data('auto-play');
-    var $timeout = $logoCarousel.data('timeout');
-    $logoCarousel.owlCarousel({
-        loop: true,
-        dots: false,
-        nav: false,
-        autoplay: $autoplay,
-        autoplayTimeout: $timeout,
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-
-    /*Portfolio Single Slider
-     ************************************************/
-    var portfolioSlider = new MasterSlider();
-    portfolioSlider.setup('portfolioSlider', {
-        width: 800,    // slider standard width
-        height: 840,   // slider standard height
-        space: 5,
-        view: "flow"
-        // more slider options goes here...
-        // check slider options section in documentation for more options.
-    });
-    // adds Arrows navigation control to the slider.
-    portfolioSlider.control('arrows');
-    portfolioSlider.control('bullets', {autohide: false});
-
-    /*Post Single Slider
-     ************************************************/
-    var postSlider = new MasterSlider();
-    postSlider.setup('postSlider', {
-        width: 750,    // slider standard width
-        height: 480,   // slider standard height
-        space: 5
-    });
-    // adds Arrows navigation control to the slider.
-    postSlider.control('arrows');
-    postSlider.control('bullets', {autohide: false});
-
-    /*Single Product Slider
-     ************************************************/
-    var spSlider = new MasterSlider();
-    spSlider.control('thumblist', {
-        autohide: false,
-        dir: 'h',
-        arrows: false,
-        align: 'bottom',
-        width: 120,
-        height: 130,
-        margin: 5,
-        space: 0
-    });
-    spSlider.setup('spSlider', {
-        width: 750,
-        height: 714,
-        space: 0,
-        view: 'scale'
-    });
+    //var partView = new MasterSlider();
+    //
+    //partView.control('arrows');
+    //partView.control('slideinfo', {insertTo: "#partial-view", autohide: false, align: 'bottom', size: 160});
+    //partView.control('circletimer', {color: "#FFFFFF", stroke: 9});
+    //
+    //partView.setup('slider01', {
+    //    width: 760,
+    //    height: 400,
+    //    space: 10,
+    //    loop: true,
+    //    view: 'partialWave',
+    //    layout: 'partialview'
+    //});
+    //
+    ///*Fullwidth Partial View Slider
+    //// ************************************************/
+    //var fsPartView = new MasterSlider();
+    //
+    //fsPartView.control('arrows');
+    //fsPartView.control('slideinfo', {insertTo: "#fs-partial-view-info", autohide: false, align: 'bottom', size: 160});
+    //fsPartView.control('circletimer', {color: "#FFFFFF", stroke: 9});
+    //
+    //fsPartView.setup('fs-partial-view', {
+    //    width: 760,
+    //    height: 400,
+    //    space: 10,
+    //    loop: true,
+    //    view: 'fadeFlow',
+    //    layout: 'partialview'
+    //});
+    //
+    ///*Display Slider
+    // ************************************************/
+    //var slider = new MasterSlider();
+    //slider.setup('masterslider', {
+    //    width: 507,
+    //    height: 286,
+    //    speed: 20,
+    //    preload: 0,
+    //    space: 2,
+    //    view: 'flow'
+    //});
+    //slider.control('arrows');
+    //slider.control('bullets', {autohide: false});
+    //
+    ///*Staff 3D Carousel
+    // ************************************************/
+    //var staffCar = new MasterSlider();
+    //
+    //staffCar.setup('slider02', {
+    //    loop: true,
+    //    width: 240,
+    //    height: 240,
+    //    speed: 20,
+    //    view: 'wave',
+    //    preload: 0,
+    //    space: 0
+    //});
+    //staffCar.control('arrows');
+    //staffCar.control('slideinfo', {insertTo: '#staff-info'});
+    //
+    ///*Product Showcase Slider
+    // ************************************************/
+    //var showcaseSlider = new MasterSlider();
+    //showcaseSlider.setup('showcase-slider', {
+    //    width: 1024,
+    //    height: 580,
+    //    space: 0,
+    //    fillMode: 'fit',
+    //    speed: 25,
+    //    preload: 'all',
+    //    view: 'flow',
+    //    loop: true
+    //});
+    //
+    //showcaseSlider.control('arrows', {autohide: false});
+    //showcaseSlider.control('bullets', {autohide: false, align: 'bottom', margin: -30});
+    //
+    ///*Logos Carousel
+    // ************************************************/
+    //var $autoplay = $logoCarousel.data('auto-play');
+    //var $timeout = $logoCarousel.data('timeout');
+    //$logoCarousel.owlCarousel({
+    //    loop: true,
+    //    dots: false,
+    //    nav: false,
+    //    autoplay: $autoplay,
+    //    autoplayTimeout: $timeout,
+    //    responsive: {
+    //        0: {
+    //            items: 2
+    //        },
+    //        600: {
+    //            items: 3
+    //        },
+    //        1000: {
+    //            items: 4
+    //        }
+    //    }
+    //});
+    //
+    ///*Portfolio Single Slider
+    // ************************************************/
+    //var portfolioSlider = new MasterSlider();
+    //portfolioSlider.setup('portfolioSlider', {
+    //    width: 800,    // slider standard width
+    //    height: 840,   // slider standard height
+    //    space: 5,
+    //    view: "flow"
+    //    // more slider options goes here...
+    //    // check slider options section in documentation for more options.
+    //});
+    //// adds Arrows navigation control to the slider.
+    //portfolioSlider.control('arrows');
+    //portfolioSlider.control('bullets', {autohide: false});
+    //
+    ///*Post Single Slider
+    // ************************************************/
+    //var postSlider = new MasterSlider();
+    //postSlider.setup('postSlider', {
+    //    width: 750,    // slider standard width
+    //    height: 480,   // slider standard height
+    //    space: 5
+    //});
+    //// adds Arrows navigation control to the slider.
+    //postSlider.control('arrows');
+    //postSlider.control('bullets', {autohide: false});
+    //
+    ///*Single Product Slider
+    // ************************************************/
+    //var spSlider = new MasterSlider();
+    //spSlider.control('thumblist', {
+    //    autohide: false,
+    //    dir: 'h',
+    //    arrows: false,
+    //    align: 'bottom',
+    //    width: 120,
+    //    height: 130,
+    //    margin: 5,
+    //    space: 0
+    //});
+    //spSlider.setup('spSlider', {
+    //    width: 750,
+    //    height: 714,
+    //    space: 0,
+    //    view: 'scale'
+    //});
 
     /*Goods Package Carousel
      ************************************************/
