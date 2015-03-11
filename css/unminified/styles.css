@@ -13192,11 +13192,13 @@ label.error {
 .header .tools {
     width: 215px;
     float: right;
+    display: none;
 }
 
 @media only screen and (max-width: 1024px) {
     .header .tools {
         width: auto;
+        display: none;
     }
 }
 
@@ -15233,7 +15235,7 @@ label.error {
 }
 
 .transparent.opaque li a {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.56);
 }
 
 .transparent.opaque li a:after {
@@ -15247,7 +15249,7 @@ label.error {
 
 @media only screen and (max-width: 1024px) {
     .transparent.opaque li a {
-        color: #000000;
+        color: rgba(0, 0, 0, 0.56);
     }
 
     .transparent.opaque li a:after {
@@ -23630,4 +23632,21 @@ meta.foundation-data-attribute-namespace {
         font-size: 1.5em;
         font-weight: normal;
     }
+}
+
+section#development {
+    background-size: 106% auto !important;
+    min-height: 706px;
+    padding-top: 125px;
+    margin-top: 214px;
+    background-color: #fff !important;
+    background-image: url(background: transparent url("img/Humanity-s-challenges-will-be-of-growth-and-abundance-reverse.jpg");
+    background-position: 61% -175px !important;
+
+}
+
+section#development div.overlay {
+    display: none;
+    top: 0;
+
 }

@@ -10440,9 +10440,7 @@ img {
     margin-bottom: 0 !important
 }
 
-.no-padding-top {
-    padding-top: 0 !important
-}
+
 
 .no-padding-bottom {
     padding-bottom: 0 !important
@@ -12115,11 +12113,13 @@ label.error {
     width: 215px;
     float: right;
     font-size:75%;
+    display: none;
 }
 
 @media only screen and (max-width: 1024px) {
     .header .tools {
-        width: auto
+        width: auto;
+        display: none;
     }
 }
 
@@ -13990,7 +13990,7 @@ label.error {
 }
 
 .transparent.opaque li a {
-    color: #000
+    color: rgba(0, 0, 0, 0.56)
 }
 
 .transparent.opaque li a:after {
@@ -14003,7 +14003,7 @@ label.error {
 
 @media only screen and (max-width: 1024px) {
     .transparent.opaque li a {
-        color: #000
+        color: rgba(0, 0, 0, 0.56)
     }
 
     .transparent.opaque li a:after {
@@ -19187,9 +19187,33 @@ section#corporate h2{
     text-decoration: none;
     font-weight: bold
 }
-section#development{
-    background-size:130% !important;
+section#development div.overlay{
+    top: 0;
+    /*display: none;*/
 }
+/*section#development div.row{*/
+    /*background-color: rgba(0, 0, 0, 0.70);*/
+/*}*/
+section#development{
+    background-size: 106% auto !important;
+    background-position-x: 100px !important;
+    min-height: 706px;
+    padding-top: 225px;
+    background-color: #fff !important;
+    background-image: url("img/Humanity-s-challenges-will-be-of-growth-and-abundance-reverse.jpg");
+    background-position: 61% -175px !important;
+    margin-top: 214px;
+}
+
+section#research{
+    min-height: 650px;
+    padding-top: 100px;
+}
+section#career{
+    min-height: 650px;
+    padding-top: 100px !important;
+}
+
 .panel .panel-heading a.collapsed {
     color: #000
 }
