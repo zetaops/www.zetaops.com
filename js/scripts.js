@@ -8,6 +8,13 @@
 $(document).ready(function ($) {
     'use strict';
 
+    $("input[type='button']").click(function(){
+        var bt = this;
+        $.post('formsubmit.php', $(this).parents('form').serialize()).success(function(){
+            $(bt).before('Teşekkür Ederiz').remove()
+        })
+
+    });
     /*Global Variables
      *******************************************/
     /// Header / Navigation Variables------------------------------------
