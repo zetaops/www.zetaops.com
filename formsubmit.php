@@ -6,7 +6,7 @@ $default_subject = "Zetaops iletisim";
 // the to, cc, and bcc email addresses.
 // seperate them by commas if you want to use multiple
 $to="info@zetaops.io"; //change this to your email
-<!--$cc="evrenesat@zetaops.io";-->
+//$cc="evrenesat@zetaops.io";
 $bcc="";
 // the default redirect.
 // if you set <input type="hidden" name="redirect" value="foo.htm"> it will override this
