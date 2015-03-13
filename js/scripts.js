@@ -11,13 +11,15 @@ $(document).ready(function ($) {
     $("input[type='button']").click(function(){
         var bt = this;
         $.post('formsubmit.php', $(this).parents('form').serialize()).success(function(){
-            $(bt).before('Teşekkür Ederiz').remove()
+            $(bt).siblings('.thank_you_msg').show();
+            $(bt).remove();
         })
 
     });
     /*Global Variables
      *******************************************/
     /// Header / Navigation Variables------------------------------------
+    var bgvid = document.getElementById('bgvid');
     var $header = $('.header');
     var $headerToolbar = $('.header-toolbar');
     var $stickyHeader = $('.header.sticky');
@@ -139,8 +141,10 @@ $(document).ready(function ($) {
         var $logoDefault = $transpHeader.find('.logo > img').data('logo-default');
         if ($(window).scrollTop() > $(window).height() - 5) {
             $transpHeader.addClass('opaque');
+            bgvid.pause()
             $transpHeader.find('.logo > img').attr('src', $logoDefault);
         } else {
+            bgvid.play()
             $transpHeader.removeClass('opaque');
             $transpHeader.find('.logo > img').attr('src', $logoAlt);
         }

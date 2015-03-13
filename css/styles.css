@@ -11,7 +11,11 @@ body {
     margin: 0;
     line-height: 0.429;
 }
-
+div.thank_you_msg{
+    display:none;
+    font-weight: bold;
+    color: #55754f;
+}
 video#bgvid {
     position: relative;
     right: 0;
@@ -19127,15 +19131,17 @@ meta.foundation-data-attribute-namespace {
     .nav-tabs.vertical li.active a:after, .nav-tabs.vertical li.active a:hover:after, .nav-tabs.vertical li.active a:focus:after {
         width: 100%;
         max-height: inherit;
-        min-height: inherit
+        min-height: inherit;
     }
 }
 
-@media only screen and (max-width: 991px) and only screen and (max-width:
+@media  screen and (max-width:991px){
+    .nav-tabs.vertical li {
+        margin: 0px 10px 5px 10px
+    }
+}
 
-768px
-
-) {
+@media only screen and (max-width:768px) {
     .nav-tabs.vertical li {
         margin: 0px 10px 5px 10px
     }
