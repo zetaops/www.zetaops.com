@@ -23635,18 +23635,55 @@ meta.foundation-data-attribute-namespace {
 }
 
 section#development {
-    background-size: 106% auto !important;
-    min-height: 706px;
-    padding-top: 125px;
-    margin-top: 214px;
+    background-size: 140% auto !important;
+    min-height: 731px;
+    margin-top: 200px;
     background-color: #fff !important;
     background-image: url(background: transparent url("img/Humanity-s-challenges-will-be-of-growth-and-abundance-reverse.jpg");
-    background-position: 61% -175px !important;
+    background-position: 34% -175px !important;
+    padding-top: 150px;
 
 }
 
 section#development div.overlay {
     display: none;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.19) !important;
+
+}
+
+section#development li {
+    background-color: rgba(0, 0, 0, 0.33);
+    border-radius: 0 10px 10px 4px;
+    padding: 15px 10px;
+    margin: 25px 0;
+
+}
+
+section#development ul {
+    color: white;
+    list-style: none;
+
+}
+
+section#development h4 {
+    color: #B0ECEF;
+    font-size: 1.5em;
+
+}
+
+section#development h3 {
+    font-weight: bold;
+    left: -68px;
+    opacity: 0.8;
+    position: relative;
+    text-shadow: 0px 0px 6px white;
+    top: -68px;
+
+}
+
+section#development li span {
+    display: block;
+    line-height: 1.2em;
 
 }
