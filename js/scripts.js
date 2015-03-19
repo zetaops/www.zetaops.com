@@ -16,6 +16,7 @@ $(document).ready(function ($) {
         })
 
     });
+
     /*Global Variables
      *******************************************/
     /// Header / Navigation Variables------------------------------------
@@ -1207,8 +1208,13 @@ $(document).ready(function ($) {
     });
 
     //Quick Contact Form
+        $('span#epo').click(function(){
+
+        setTimeout("$('.quick-contact').toggleClass('visible')", 100);
+
+    });
     $qcfBtn.click(function () {
-        $(this).parent().find('.quick-contact').toggleClass('visible');
+        $qcForm.toggleClass('visible');
     });
 
     //Hiding Contact Form On Clicking Out
