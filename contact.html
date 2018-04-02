@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Zetaops - World is concurrent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="images/zetaops/favicon.png">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="scss/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="dist/theme.min.css" />
+
+  <!-- javascript -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>
+  <script src="dist/theme.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Navbar starts here -->
+  <div class="navbar navbar-dark navbar-expand-lg" role="banner">
+    <div class="container no-override">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/zetaops/zetaops-logo-z-33.png" class="mr-2 img-fluid" />
+        Zetaops
+      </a>
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Anasayfa</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              Ürünler
+              <i class="ion-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="ulakbus.html">ULAKBÜS</a>
+              <a class="dropdown-item" href="ulakbus2.html">ULAKBÜS v2</a>
+              <a class="dropdown-item" href="cpaas.html">ZOPS CPaaS Platform</a>
+              <a class="dropdown-item" href="intelligent_platform.html">ZOPS Intelligent Platform</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              Çözümler
+              <i class="ion-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="cloud.html">Bulut Çözümleri</a>
+              <a class="dropdown-item" href="ioo.html">IOO Çözümleri</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://blog.zetaops.io/">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Navbar -->
+
+  <div class="contact-us-map">
+    <div class="container">
+      <div class="location d-none d-md-block">
+        <h5>ZetaOps</h5>
+        <p>İzmir Yüksek Teknoloji Enstitüsü, İzmir Teknoloji Geliştirme Bölgesi A4 Blok No:5 IYTE Campus, Gülbahçe Mah. URLA/IZMIR</p>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <div class="contact-us-info">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-lg-8 message">
+          <h3>Send us a message</h3>
+          <p>
+            You can contact us with anything related to React. <br/> We'll get in touch with you as soon as possible.
+          </p>
+          <form role="form" id="contact-form" method="post">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" name="name" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" name="email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" class="form-control" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea name="message" class="form-control" id="message" rows="6"></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" class="button button-small" value="Email us" />
+            </div>
+          </form>
+        </div> -->
+        <div class="col-lg-4 contact">
+          <div class="address">
+            <h3>Adresimiz</h3>
+            <p>
+              İzmir Yüksek Teknoloji Enstitüsü,  <br />
+              İzmir Teknoloji Geliştirme Bölgesi A4 Blok No:5 ,  <br />
+              IYTE Campus, Gülbahçe Mah. URLA/IZMIR <br />
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 contact">
+        </div>
+        <div class="col-lg-4 contact">
+          <div class="phone">
+            <h3>Telefon</h3>
+            <p>
+              +90 232 502 08 57
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer footer--dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 menu">
+          <h3>Kurumsal</h3>
+          <ul>
+            <li>
+              <a href="about.html">Hakkımızda</a>
+            </li>
+            <li>
+              <a href="team.html">Ekibimiz</a>
+            </li>
+            <li>
+              <a href="jobs.html">Kariyer</a>
+            </li>
+            <li>
+              <a href="policy.html">Bilgi güvenliği politikamız</a>
+            </li>
+            <li>
+              <a href="contact.html">İletişim</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 menu">
+          <h3>Menu</h3>
+          <ul>
+            <li>
+              <a href="features.html">About us</a>
+            </li>
+            <li>
+              <a href="services.html">Contact us</a>
+            </li>
+            <li>
+              <a jobs</a>
+              <a href="about.html" class="hiring">
+                We're hiring!
+              </a>
+            </li>
+            <li>
+              <a href="support.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="blog.html">Status</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 menu">
+          <h3>Social</h3>
+          <ul>
+            <li>
+              <a href="https://twitter.com/zetaops">Twitter</a>
+            </li>
+            <li>
+              <a href="https://facebook.com/zetaops">Facebook</a>
+            </li>
+            <li>
+              <a href="https://github.com/zetaops">Github</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 newsletter">
+          <div id="mc_embed_signup" class="signup clearfix">
+          <p>
+            Sign up for the newsletter and we'll inform you of updates, offers and more.
+          </p>
+          <form action="https://github.us12.list-manage.com/subscribe/post?u=e45b6e804723f9ef2c425b475&amp;id=1ed41aae71" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+
+              <div class="mc-field-group">
+              	<input type="text" value="" name="EMAIL" class="form-control required email" placeholder="Your email address">
+              </div>
+              	<div id="mce-responses" class="clear">
+              		<div class="response" id="mce-error-response" style="display:none"></div>
+              		<div class="response" id="mce-success-response" style="display:none"></div>
+              	</div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e45b6e804723f9ef2c425b475_1ed41aae71" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe"></div>
+              </div>
+          </form>
+          </div>
+          <a href="https://twitter.com/zetaops">
+            <img src="images/social/social-twitter-blue.png" alt="twitter" />
+          </a>
+          <a href="https://www.facebook.com/zetaops/">
+            <img src="images/social/social-fb.png" alt="facebook" />
+          </a>
+          <a href="https://github.com/zetaops/">
+            <img src="images/social/social-github-light.png" alt="github" />
+          </a>
+        </div>
+      </div>
+      <div class="credits">
+        <p><img src="images/zetaops/zops-enginar.png" alt="zops-enginar" /></p>
+        <p>Copyright © 2019. React</p>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript">
+    $(function () {
+      // Google maps
+      var mapLocation = new google.maps.LatLng(38.314,26.634);
+
+      map = new GMaps({
+        streetViewControl : false,
+        overviewMapControl: false,
+        mapTypeControl: false,
+        panControl : false,
+        scrollwheel: false,
+        center: mapLocation,
+        el: '#map',
+        zoom: 15,
+        styles: [
+        {
+          "featureType":"landscape",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":65},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"poi",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":51},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.highway",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.arterial",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":30},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"road.local",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":40},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"transit",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"administrative.province",
+          "stylers":[
+          {"visibility":"off"}
+          ]
+        },
+        {
+          "featureType":"water",
+          "elementType":"labels",
+          "stylers":[
+          {"visibility":"on"},
+          {"lightness":-25},
+          {"saturation":-100}
+          ]
+        }
+        ]
+      });
+
+      map.addMarker({
+        position: mapLocation,
+        icon: 'images/map-icon.png'
+      });
+
+    });
+  </script>
+</body>
+</html>
