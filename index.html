@@ -80,20 +80,61 @@
     </div>
   </div>
   <!-- End Navbar -->
-
-  <!-- images/index-hero.jpg is used for background... -->
-  <div class="index-hero">
-    <div class="container">
-      <h1 class="hero-text customFadeInDown">
-        Özgün değer üretmek
-      </h1>
-      <p class="sub-text customFadeInDown">
-        ZetaOps, 2014 yılında İzmir Yüksek Teknoloji Enstitüsü içinde yer alan İzmir Teknoloji Geliştirme Bölgesi içinde kuruldu. Temel hedefimiz gerçekten ar-ge yapabilmek. Özgün ve yenilikçi yazılım ve donanım sistemleri yaratmak, bilişimle ilgili dünyadaki gelişmelere bir tuğla koyabilmek istiyoruz. Türkiye'de çok az bilinen açık kaynak kodlu yazılım geliştirme ilkelerini elle tutulur ürünlere dönüştürerek ülkemiz ve dünya için değer üretmeye çalışıyoruz.
-      </p>
-      <div class="cta customFadeInDown">
-        <a href="contact.html" class="button-outline">Bizimle İletişime Geçin</a>
+  <div class="slider-hero" id="slider">
+    <a class="slide-nav prev" href="#">Prev</a>
+    <a class="slide-nav next" href="#">Next</a>
+    <nav>
+      <a class="active" href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </nav>
+    <div class="slides">
+      <div class="slide first active">
+        <div class="bg"></div>
+        <div class="container customFadeInUp">
+          <h1 class="hero-text">Özgün değer üretmek</h1>
+          <p class="sub-text">
+            ZetaOps, 2014 yılında İzmir Yüksek Teknoloji Enstitüsü içinde yer alan İzmir Teknoloji Geliştirme Bölgesi içinde kuruldu. Temel hedefimiz gerçekten ar-ge yapabilmek. Özgün ve yenilikçi yazılım ve donanım sistemleri yaratmak, bilişimle ilgili dünyadaki gelişmelere bir tuğla koyabilmek istiyoruz. Türkiye'de çok az bilinen açık kaynak kodlu yazılım geliştirme ilkelerini elle tutulur ürünlere dönüştürerek ülkemiz ve dünya için değer üretmeye çalışıyoruz.
+            <br> <a href="contact.html" class="button-outline text-center mt-4">Bizimle İletişime Geçin</a>
+          </p>
+        </div>
       </div>
-      <img src="images/index/iztekgeb.jpg" class="device d-none d-lg-block">
+
+      <div class="slide second">
+        <!-- scss/custom/pages/_index2.scss -->
+        <div class="bg"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 info">
+              <h1 class="hero-text">
+                Take control of your business anywhere
+              </h1>
+              <p>
+                React is the best way to get a great design out of the box with lots of options for customization.
+              </p>
+            </div>
+            <div class="col-sm-6 hidden-xs mobiles">
+              <!-- <img src="images/devices3.png" class="img-fluid customFadeInUp" alt="devices" /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide third">
+        <div class="bg"></div>
+        <div class="container customFadeInDown">
+          <h1 class="hero-text">
+            Track any data point in your app in real time
+          </h1>
+          <p class="sub-text">
+            Try our 30 day trial so you can check out all the features that we offer, no contracts
+            or credit card required.
+          </p>
+          <div class="cta">
+            <a href="features.html" class="button-outline">See the tour</a>
+            <a href="signup.html" class="button">Sign up free</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -238,6 +279,90 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    $(function () {
+      var $navDots = $("#slider nav a")
+      var $next = $(".slide-nav.next");
+      var $prev = $(".slide-nav.prev");
+      var $slides = $("#slider .slides .slide");
+      var actualIndex = 0;
+      var swiping = false;
+      var interval;
+
+      $navDots.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        actualIndex = $navDots.index(this);
+        updateSlides(actualIndex);
+      });
+
+      $next.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        clearInterval(interval);
+        interval = null;
+
+        actualIndex++;
+        if (actualIndex >= $slides.length) {
+          actualIndex = 0;
+        }
+
+        updateSlides(actualIndex);
+      });
+
+      $prev.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        clearInterval(interval);
+        interval = null;
+
+        actualIndex--;
+        if (actualIndex < 0) {
+          actualIndex = $slides.length - 1;
+        }
+
+        updateSlides(actualIndex);
+      });
+
+      function updateSlides(index) {
+        // update nav dots
+        $navDots.removeClass("active");
+        $navDots.eq(index).addClass("active");
+
+        // update slides
+        var $activeSlide = $("#slider .slide.active");
+        var $nextSlide = $slides.eq(index);
+
+        $activeSlide.fadeOut();
+        $nextSlide.addClass("next").fadeIn();
+
+        setTimeout(function () {
+          $slides.removeClass("next").removeClass("active");
+          $nextSlide.addClass("active");
+          $activeSlide.removeAttr('style');
+          swiping = false;
+        }, 1000);
+      }
+
+      interval = setInterval(function () {
+        if (swiping) { return; }
+        swiping = true;
+
+        actualIndex++;
+        if (actualIndex >= $slides.length) {
+          actualIndex = 0;
+        }
+
+        updateSlides(actualIndex);
+      }, 5000);
+    });
+  </script>
   <!-- End Footer -->
 </body>
 </html>
