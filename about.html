@@ -38,6 +38,19 @@
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              Kurumsal
+              <i class="ion-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="about.html">Hakkımızda</a>
+                <a class="dropdown-item" href="team.html">Ekibimiz</a>
+                <a class="dropdown-item" href="jobs.html">Kariyer</a>
+                <a class="dropdown-item" href="policy.html">Bilgi güvenliği politikamız</a>
+                <a class="dropdown-item" href="contact.html">İletişim</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
               Ürünler
               <i class="ion-chevron-down"></i>
             </a>
@@ -163,7 +176,7 @@
   <div class="footer footer--dark">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 menu">
+        <div class="col menu">
           <h3>Kurumsal</h3>
           <ul>
             <li>
@@ -183,30 +196,27 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-3 menu">
-          <h3>Menu</h3>
+        <div class="col menu">
+          <h3>Ürünler</h3>
+          <ul>
+            <li><a href="ulakbus.html">ULAKBÜS</a></li>
+            <li><a href="ulakbus2.html">ULAKBÜS v2</a></li>
+            <li><a href="cpaas.html">ZOPS CPaaS Platform</a></li>
+            <li><a href="intelligent_platform.html">ZOPS Intelligent Platform</a></li>
+          </ul>
+        </div>
+        <div class="col menu">
+          <h3>Çözümler</h3>
           <ul>
             <li>
-              <a href="features.html">About us</a>
+              <a href="cloud.html">Bulut Çözümleri</a>
             </li>
             <li>
-              <a href="services.html">Contact us</a>
-            </li>
-            <li>
-              <a jobs</a>
-              <a href="about.html" class="hiring">
-                We're hiring!
-              </a>
-            </li>
-            <li>
-              <a href="support.html">Portfolio</a>
-            </li>
-            <li>
-              <a href="blog.html">Status</a>
+              <a href="ioo.html">IOO Çözümleri</a>
             </li>
           </ul>
         </div>
-        <div class="col-md-2 menu">
+        <div class="col menu">
           <h3>Social</h3>
           <ul>
             <li>
@@ -222,23 +232,23 @@
         </div>
         <div class="col-md-4 newsletter">
           <div id="mc_embed_signup" class="signup clearfix">
-          <p>
-            Sign up for the newsletter and we'll inform you of updates, offers and more.
-          </p>
-          <form action="https://github.us12.list-manage.com/subscribe/post?u=e45b6e804723f9ef2c425b475&amp;id=1ed41aae71" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
+            <p>
+              Sign up for the newsletter and we'll inform you of updates, offers and more.
+            </p>
+            <form action="https://github.us12.list-manage.com/subscribe/post?u=e45b6e804723f9ef2c425b475&amp;id=1ed41aae71" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
 
-              <div class="mc-field-group">
-              	<input type="text" value="" name="EMAIL" class="form-control required email" placeholder="Your email address">
-              </div>
-              	<div id="mce-responses" class="clear">
-              		<div class="response" id="mce-error-response" style="display:none"></div>
-              		<div class="response" id="mce-success-response" style="display:none"></div>
-              	</div>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e45b6e804723f9ef2c425b475_1ed41aae71" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe"></div>
-              </div>
-          </form>
+                <div class="mc-field-group">
+                	<input type="text" value="" name="EMAIL" class="form-control required email" placeholder="Your email address">
+                </div>
+                	<div id="mce-responses" class="clear">
+                		<div class="response" id="mce-error-response" style="display:none"></div>
+                		<div class="response" id="mce-success-response" style="display:none"></div>
+                	</div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e45b6e804723f9ef2c425b475_1ed41aae71" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe"></div>
+                </div>
+            </form>
           </div>
           <a href="https://twitter.com/zetaops">
             <img src="images/social/social-twitter-blue.png" alt="twitter" />
@@ -257,6 +267,90 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    $(function () {
+      var $navDots = $("#slider nav a")
+      var $next = $(".slide-nav.next");
+      var $prev = $(".slide-nav.prev");
+      var $slides = $("#slider .slides .slide");
+      var actualIndex = 0;
+      var swiping = false;
+      var interval;
+
+      $navDots.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        actualIndex = $navDots.index(this);
+        updateSlides(actualIndex);
+      });
+
+      $next.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        clearInterval(interval);
+        interval = null;
+
+        actualIndex++;
+        if (actualIndex >= $slides.length) {
+          actualIndex = 0;
+        }
+
+        updateSlides(actualIndex);
+      });
+
+      $prev.click(function (e) {
+        e.preventDefault();
+        if (swiping) { return; }
+        swiping = true;
+
+        clearInterval(interval);
+        interval = null;
+
+        actualIndex--;
+        if (actualIndex < 0) {
+          actualIndex = $slides.length - 1;
+        }
+
+        updateSlides(actualIndex);
+      });
+
+      function updateSlides(index) {
+        // update nav dots
+        $navDots.removeClass("active");
+        $navDots.eq(index).addClass("active");
+
+        // update slides
+        var $activeSlide = $("#slider .slide.active");
+        var $nextSlide = $slides.eq(index);
+
+        $activeSlide.fadeOut();
+        $nextSlide.addClass("next").fadeIn();
+
+        setTimeout(function () {
+          $slides.removeClass("next").removeClass("active");
+          $nextSlide.addClass("active");
+          $activeSlide.removeAttr('style');
+          swiping = false;
+        }, 1000);
+      }
+
+      interval = setInterval(function () {
+        if (swiping) { return; }
+        swiping = true;
+
+        actualIndex++;
+        if (actualIndex >= $slides.length) {
+          actualIndex = 0;
+        }
+
+        updateSlides(actualIndex);
+      }, 5000);
+    });
+  </script>
   <!-- End Footer -->
 
   <script type="text/javascript">
