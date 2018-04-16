@@ -87,7 +87,7 @@
       background: #a2a2a2;
       border-radius: 50%;
       margin: 0 3px;
-      
+
       &.active {
         background: #fff;
       }
@@ -113,7 +113,7 @@
       height: 100%;
       width: 100%;
       padding-top: 90px;
-      
+
       &.active {
         opacity: 1;
         display: block;
@@ -123,7 +123,7 @@
       &.next {
         .bg {
           @media(min-width: 768px) {
-            @include animation(slideLeft 700ms linear); 
+            @include animation(slideLeft 700ms linear);
           }
         }
 
@@ -180,7 +180,7 @@
         }
 
         .bg {
-          background-image: url("../images/index-hero.jpg");
+          background-image: url("../images/index/slider1.jpg");
 
           &:after {
             background: rgba(41, 69, 125, 0.35);
@@ -224,7 +224,7 @@
         .video-wrapper {
           text-align: center;
           margin-top: 50px;
-          
+
           @media(max-width: 767px) {
             margin-top: 25px;
           }
@@ -236,7 +236,7 @@
             border-radius: 5px;
 
             @include animationDuration(1.2s);
-            
+
             img {
               max-width: 280px;
               cursor: pointer;
@@ -255,7 +255,7 @@
         }
 
         .bg {
-          background-image: url("../images/bgs/photo-1472132858735-6313c7962473.jpeg");
+          background-image: url("../images/index/slider2.jpg");
           background-position: center 18%;
 
           &:after {
@@ -354,7 +354,7 @@
         }
 
         .bg {
-          background-image: url('../images/bgs/photo-1467659226669-a1360d97be2d.jpeg');
+          background-image: url('../images/index/slider3.jpg');
           background-position: center 15%;
 
           &:after {
@@ -501,7 +501,7 @@
 
     .feature {
       cursor: pointer;
-      
+
       @media(min-width: 992px) {
         width: 85%;
         margin: 0 auto;
