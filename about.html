@@ -83,22 +83,16 @@
 
   <div class="about-us-slider">
     <div class="container">
-      <div class="header">
-        <h3>About React Themes</h3>
-        <p>
-          You have to roll up your sleeves and be a stonecutter before you can become a sculptor – command of craft always precedes art.
-        </p>
-      </div>
       <div class="flexslider">
         <ul class="slides">
           <li>
-            <img src="images/office2.png" alt="office2" />
+            <img src="images/xkcd/tar-1.png" alt="xkcd tar-1" />
           </li>
           <li>
-            <img src="images/office1.png" alt="office1" />
+            <img src="images/xkcd/378.png" alt="xkcd 378" />
           </li>
           <li>
-            <img src="images/office3.png" alt="office3" />
+            <img src="images/xkcd/456.png" alt="xkcd 456" />
           </li>
         </ul>
       </div>
@@ -242,6 +236,7 @@
       </div>
     </div>
   </div>
+  <!-- End Footer -->
   <script type="text/javascript">
     $(function () {
       var $navDots = $("#slider nav a")
@@ -326,12 +321,11 @@
       }, 5000);
     });
   </script>
-  <!-- End Footer -->
 
   <script type="text/javascript">
     $(function() {
       $('.flexslider').flexslider({
-        directionNav: false,
+        directionNav: true,
         slideshowSpeed: 4000
       });
       $('[data-toggle="tooltip"]').tooltip();
