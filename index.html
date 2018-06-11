@@ -290,7 +290,15 @@
     </div>
   </div>
   <!-- End Footer -->
+  <script src="http://help.zetaops.io/assets/chat/chat.min.js"></script>
   <script type="text/javascript">
+    $(function() {
+      new ZammadChat({
+        background: '#121c2f',
+        fontSize: '12px',
+        chatId: 1
+      });
+    });
     $(function () {
       var $navDots = $("#slider nav a")
       var $next = $(".slide-nav.next");
